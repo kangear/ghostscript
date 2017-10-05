@@ -231,6 +231,9 @@ $(DD)bjc800.dev : $(cdeskjet_) $(DD)page.dev $(CONTRIB_MAK) $(MAKEDIRS)
 $(DD)escp.dev : $(cdeskjet_) $(DD)page.dev $(CONTRIB_MAK) $(MAKEDIRS)
 	$(SETPDEV) $(DD)escp $(cdeskjet_)
 
+$(DD)escpr.dev : $(cdeskjet_) $(DD)page.dev $(CONTRIB_MAK) $(MAKEDIRS)
+	$(SETPDEV) $(DD)escpr $(cdeskjet_)
+
 # NB: you can also customise the build if required, using
 # -DBitsPerPixel=<number> if you wish the default to be other than 24
 # for the generic drivers (cdj500, cdj550, pjxl300, pjtest, pjxltest).
@@ -378,6 +381,9 @@ ESCP2=$(DEVOBJ)gdevescp.$(OBJ)
 
 $(DEVOBJ)gdevescp.$(OBJ) : $(DEVSRC)gdevescp.c $(PDEVH) $(CONTRIB_MAK) $(MAKEDIRS)
 	$(DEVCC) $(DEVO_)gdevescp.$(OBJ) $(C_) $(DEVSRC)gdevescp.c
+
+$(DEVOBJ)gdevescpr.$(OBJ) : $(DEVSRC)gdevescpr.c $(PDEVH) $(CONTRIB_MAK) $(MAKEDIRS)
+	$(DEVCC) $(DEVO_)gdevescpr.$(OBJ) $(C_) $(DEVSRC)gdevescpr.c
 
 $(DD)ap3250.dev : $(ESCP2) $(DD)page.dev $(CONTRIB_MAK) $(MAKEDIRS)
 	$(SETPDEV) $(DD)ap3250 $(ESCP2)

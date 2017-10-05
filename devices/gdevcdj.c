@@ -631,6 +631,10 @@ gx_device_cdj far_data gs_escp_device =
 cdj_device(escp_procs, "escp", 360, 360, 8,
            escp_print_page, 0, 0, 1);
 
+gx_device_cdj far_data gs_escpr_device =
+cdj_device(escp_procs, "escpr", 360, 360, 8,
+          escp_print_page, 0, 0, 1);
+
 gx_device_cdj far_data gs_escpc_device =
 cdj_device(escp_procs, "escpc", 360, 360, 24,
            escp_print_page, 0, 0, 1);
